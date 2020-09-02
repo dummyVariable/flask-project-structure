@@ -2,3 +2,4 @@ blogsite/
 
 .vscode/
 
+__pycache__/

@@ -2,6 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_bootstrap import Bootstrap
 
+from app.main import main as main_blueprint
 from config import Config
 
 bootstrap = Bootstrap()
@@ -14,5 +15,7 @@ def create_app():
 
     bootstrap.init_app(app)
     db.init_app(app)
+    
+    app.register_blueprint(main_blueprint)
 
     return app
